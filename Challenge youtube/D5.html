@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Youtube - Web Prep</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+      body {
+        display: flex;
+        margin: 0;
+        height: 100vh;
+        font-family: 'Roboto', sans-serif;
+      }
+
+      .main {
+        width: 100%;
+      }
+
+      .topbar {
+        height: 8vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .content {
+        height: 100%;
+      }
+
+      .icon {
+        height: 8vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2em;
+        cursor: pointer;
+      }
+
+      .icon ion-icon {
+        font-size: 2em;
+      }
+
+      .icon p {
+        margin: 0;
+      }
+
+      .icon:not(:first-of-type) {
+        height: 16vh;
+      }
+
+      .logo {
+        height: 50%;
+      }
+
+      .search-wrapper {
+        display: flex;
+        height: 50%;
+        width: 30%;
+      }
+
+      .search-wrapper input {
+        width: 100%;
+        padding: 0 1em;
+      }
+
+      .icons-wrapper {
+        display: flex;
+        align-items: center;
+      }
+
+      .top-icon {
+        font-size: 2em;
+        padding: 0 0.5em;
+      }
+
+      .mic-icon {
+        display: flex;
+        align-items: center;
+      }
+
+      .search-btn {
+        padding: 0 0.7em;
+        font-size: 1.3em;
+        display: flex;
+        align-items: center;
+      }
+      .video-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+      }
+      .video-card {
+        display: flex;
+        flex-direction: column;
+      }
+      .video-card .thumbnail {
+        width: 100%;
+        aspect-ratio: 19 / 9;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .video-info {
+        display: flex;
+        margin-top: 12px;
+        gap: 12px;
+      }
+      .channel-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        object-fit: cover;
+        flex-shrink: 0;
+      }
+      .video-text {
+        display: flex;
+        flex-direction: column;
+      }
+      .video-title  {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 4px;
+        color: #0f0f0f;
+      }
+      .video-description {
+        font-size: 10px;
+        color: #606060;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="icon">
+        <ion-icon name="menu-sharp"></ion-icon>
+      </div>
+      <div class="icon">
+        <ion-icon name="home-outline"></ion-icon>
+        <p>Home</p>
+      </div>
+      <div class="icon">
+        <ion-icon name="compass-outline"></ion-icon>
+        <p>Explore</p>
+      </div>
+      <div class="icon">
+        <ion-icon name="albums-outline"></ion-icon>
+        <p>Library</p>
+      </div>
+    </div>
+    <div class="main">
+      <div class="topbar">
+        <img class="logo" src="assets/yt-logo.svg" alt="yt-logo" />
+        <div class="search-wrapper">
+          <input type="text" placeholder="Search on YouTube" />
+          <button class="search-btn">
+            <ion-icon name="search"></ion-icon>
+          </button>
+          <div class="top-icon mic-icon">
+            <ion-icon name="mic-sharp"></ion-icon>
+          </div>
+        </div>
+        <div class="icons-wrapper">
+          <div class="top-icon">
+            <ion-icon name="videocam-outline"></ion-icon>
+          </div>
+          <div class="top-icon">
+            <ion-icon name="notifications-outline"></ion-icon>
+          </div>
+          <div class="top-icon">
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+     <div class="content" style="display: block; width: 100%;">
+  <div style="display: flex; flex-wrap: wrap; gap: 20px; width: 100%;">
+
+    <!-- CARD 1 -->
+    <div class="video-card" style="width: 31%; min-width: 250px;">
+      <img src="assets/epicode_thumb.png" class="thumbnail" alt="Video Thumbnail" style="width: 100%; border-radius: 8px;">
+      <div class="video-info" style="display: flex; gap: 10px; margin-top: 8px;">
+        <img src="assets/epicode-logo.png" class="channel-avatar" alt="Channel Avatar" style="width: 36px; height: 36px; border-radius: 50%;">
+        <div class="video-text">
+          <h3 class="video-title">Title</h3>
+          <p class="video-description">Description</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="video-card" style="width: 31%; min-width: 250px;">
+      <img src="assets/epicode_thumb.png" class="thumbnail" alt="Video Thumbnail" style="width: 100%; border-radius: 8px;">
+      <div class="video-info" style="display: flex; gap: 10px; margin-top: 8px;">
+        <img src="assets/epicode-logo.png" class="channel-avatar" alt="Channel Avatar" style="width: 36px; height: 36px; border-radius: 50%;">
+        <div class="video-text">
+          <h3 class="video-title">Title</h3>
+          <p class="video-description">Description</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="video-card" style="width: 31%; min-width: 250px;">
+      <img src="assets/epicode_thumb.png" class="thumbnail" alt="Video Thumbnail" style="width: 100%; border-radius: 8px;">
+      <div class="video-info" style="display: flex; gap: 10px; margin-top: 8px;">
+        <img src="assets/epicode-logo.png" class="channel-avatar" alt="Channel Avatar" style="width: 36px; height: 36px; border-radius: 50%;">
+        <div class="video-text">
+          <h3 class="video-title">Title</h3>
+          <p class="video-description">Description</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="video-card" style="width: 31%; min-width: 250px;">
+      <img src="assets/epicode_thumb.png" class="thumbnail" alt="Video Thumbnail" style="width: 100%; border-radius: 8px;">
+      <div class="video-info" style="display: flex; gap: 10px; margin-top: 8px;">
+        <img src="assets/epicode-logo.png" class="channel-avatar" alt="Channel Avatar" style="width: 36px; height: 36px; border-radius: 50%;">
+        <div class="video-text">
+          <h3 class="video-title">Title</h3>
+          <p class="video-description">Description</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 5 -->
+    <div class="video-card" style="width: 31%; min-width: 250px;">
+      <img src="assets/epicode_thumb.png" class="thumbnail" alt="Video Thumbnail" style="width: 100%; border-radius: 8px;">
+      <div class="video-info" style="display: flex; gap: 10px; margin-top: 8px;">
+        <img src="assets/epicode-logo.png" class="channel-avatar" alt="Channel Avatar" style="width: 36px; height: 36px; border-radius: 50%;">
+        <div class="video-text">
+          <h3 class="video-title">Title</h3>
+          <p class="video-description">Description</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CARD 6 -->
+    <div class="video-card" style="width: 31%; min-width: 250px;">
+      <img src="assets/epicode_thumb.png" class="thumbnail" alt="Video Thumbnail" style="width: 100%; border-radius: 8px;">
+      <div class="video-info" style="display: flex; gap: 10px; margin-top: 8px;">
+        <img src="assets/epicode-logo.png" class="channel-avatar" alt="Channel Avatar" style="width: 36px; height: 36px; border-radius: 50%;">
+        <div class="video-text">
+          <h3 class="video-title">Title</h3>
+          <p class="video-description">Description</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+    
+    
+  
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
